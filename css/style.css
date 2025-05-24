@@ -1,0 +1,275 @@
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria/Geometria.eot');
+	src: local('Geometria'),
+		url('../fonts/Geometria/Geometria.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria/Geometria.woff') format('woff'),
+		url('../fonts/Geometria/Geometria.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham Pro';
+	src: url('../fonts/GothamPro-Bold/GothamPro-Bold.eot');
+	src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+		url('../fonts/GothamPro-Bold/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/GothamPro-Bold/GothamPro-Bold.woff') format('woff'),
+		url('../fonts/GothamPro-Bold/GothamPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-Medium/Geometria-Medium.eot');
+	src: local('Geometria'),
+		url('../fonts/Geometria-Medium/Geometria-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Geometria-Medium/Geometria-Medium.woff') format('woff'),
+		url('../fonts/Geometria-Medium/Geometria-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+html, body {
+	background:#0d090a;
+	color:#FFFFFF;
+	padding:0px;
+	margin:0px;
+	font-family: 'Geometria';
+	font-weight: 400;
+	font-size: 24px;
+	height:100%;
+}
+
+a {
+	color:#fff;
+}
+
+ul {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+
+.bg_als {
+	position:relative;
+	height:100%;
+}
+
+.bg_als img {
+	max-width:100%;
+	height:auto;
+}
+
+.el_1 {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	max-width:712px;
+	width:100%;
+}
+
+.el_2 {
+	position:absolute;
+	top:0px;
+	right:5px;
+	max-width:440px;
+	width:100%;
+}
+
+.el_3 {
+	position:absolute;
+	width:100%;
+	max-width:354px;
+	bottom:150px;
+	right:70px;
+}
+
+.el_4 {
+	position:absolute;
+	width:100%;
+	max-width:180px;
+	top:50px;
+	left:10px;
+}
+
+.el_5 {
+	position:absolute;
+	top:0px;
+	right:30%;
+	max-width:566px;
+	width:100%;
+}
+
+.wrapper {
+	min-height:100%;
+	position:relative;
+	display:flex;
+	flex-direction:column;
+}
+
+.menu {
+	position:absolute;
+	top:55px;
+	left:230px;
+	display:flex;
+	align-items:center;
+	gap:30px;
+}
+
+.menu a {
+	font-family: 'Geometria';
+	font-weight: 400;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-decoration:none;
+}
+
+.menu a:hover {
+	text-decoration:underline;
+}
+
+.logo {
+	max-width:890px;
+	margin:auto;
+	position:relative;
+	z-index:9;
+	font-family: Geometria;
+	font-weight: 500;
+	font-size: 48px;
+}
+
+.logo span {
+	font-weight: 900;
+	font-size: 200px;
+	font-family: Gotham Pro;
+}
+
+.soc {
+	position:absolute;
+	bottom:40px;
+	right:70px;
+	display:flex;
+	gap:30px;
+}
+
+.soc a:hover path {
+	fill:#FB6542;
+	transition:0.5s;
+}
+
+.burger {
+	position: absolute;
+    top: 52px;
+    right: 70px;
+	transition:2s;
+	cursor:pointer;
+}
+
+.burger:hover {
+	transform: rotate(360deg);
+}
+
+.wrapper img {
+	width:100%;
+}
+
+@media screen and (max-width: 1700px) {
+	
+	.el_1 {
+		display:none;
+	}
+	
+}
+
+@media screen and (max-width: 1200px) {
+     
+	.el_2 {
+		max-width:300px;
+	}
+	
+	.el_3, .el_4 {
+		display:none;
+	}
+	
+	.menu {
+		left: 30px;
+		gap: 15px;
+	}
+	
+	.soc {
+		gap: 15px;
+	}
+
+}
+	
+@media screen and (max-width: 850px) {
+	
+	.el_2 {
+		display:none;
+	}
+	
+	.soc {
+		bottom: 0px;
+		left: 0px;
+		background:#ff6533;
+		padding:20px 30px;
+		align-items:center;
+		justify-content:space-between;
+		width:100%;
+	}
+	
+	.soc a:hover path {
+		fill:#0d090a;
+	}
+	
+	.logo {
+		padding:0 30px;
+	}
+	
+	.logo span {
+		font-size: 100px;
+	}
+	
+}
+
+@media screen and (max-width: 700px) {
+	
+	.menu {
+		top: 30px;
+		left: 30px;
+		flex-direction:column;
+	}
+	
+	.logo span {
+		font-size: 50px;
+	}
+	
+	.logo {
+		font-size:30px;
+	}
+	
+}
+	
+@media screen and (max-width: 400px) {
+	
+	.soc svg {
+		width:40px;
+		height:40px;
+	}
+	
+	.soc a {
+		display:flex;
+	}
+	
+	.burger {
+		right:30px;
+		top:30px;
+	}
+	
+}
